@@ -1,0 +1,19 @@
+
+
+<ngb-carousel *ngIf="shoesData">
+	<ng-template *ngFor="let innerShoes of shoesData" ngbSlide>
+		<div class="picsum-img-wrapper">
+			<div class="card picsum-img-item" *ngFor="let item of innerShoes">
+				<img [src]="item.image" alt="Random first slide" />
+                <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">{{item.category}}</p>
+                    <p class="fw-bold">MRP:₹{{item.price}}</p>
+                </div>
+			</div>
+		</div>
+	</ng-template>
+</ngb-carousel>
+
+
+
